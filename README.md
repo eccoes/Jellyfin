@@ -1,5 +1,5 @@
-# Jellyfin
-For Unraid, privileged mode must be used in docker otherwise rar2fs cannot mount.
+# Jellyfin with rar2fs support
+For Unraid, privileged mode must be used in docker otherwise rar2fs cannot mount the share.
 
-Point /media to your folders with rar-media, for example /media = /mnt/user/Movies
-After the docker is started, open console and run "rar2fs /media /data-unrar -o allow_other --seek-length=1" without quotes.
+Point Container Path: /media in Unraid to your folders with rar-media, for example /media = /mnt/user/Movies.
+In Jellyfin, simply add /data-unrar/Movies to the library
