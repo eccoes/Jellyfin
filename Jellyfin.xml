@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Jellyfin</Name>
+  <Repository>eccoes/jellyfin-unraid:latest</Repository>
+  <Registry>https://github.com/eccoes/Jellyfin/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://github.com/eccoes/Jellyfin/</Support>
+  <Project>https://github.com/eccoes/Jellyfin/</Project>
+  <Overview>Jellyfin Server is a home media server built on top of other popular open source technologies such as Service Stack, jQuery, jQuery mobile, and Mono and will remain completely free!</Overview>
+  <Category>Tools: Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:8096]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/jellyfin-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1687479272</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Container Port" Target="8096" Default="8096" Mode="tcp" Description="Jellyfin Port" Type="Port" Display="always" Required="false" Mask="false">29316</Config>
+  <Config Name="Container Port" Target="8920" Default="8920" Mode="tcp" Description="Jellyfin Port" Type="Port" Display="always" Required="false" Mask="false">29316</Config>
+  <Config Name="AppData Location" Target="/data" Default="/mnt/user/appdata/jellyfin" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/jellyfin</Config>
+  <Config Name="Cache Location" Target="/media" Default="/mnt/user/" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/</Config>
+  <Config Name="Cache Location" Target="/cache" Default="/mnt/user/appdata/Jellyfin/cache/" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Jellyfin/cache/</Config>
+  <Config Name="UID Permissions" Target="UID" Default="99" Mode="" Description="AppData Ownership Settings" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
+  <Config Name="GID Permissions" Target="GID" Default="100" Mode="" Description="AppData Ownership Settings" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
+  <Screenshot><Screenshot/>
+  <License></License>
+</Container>
