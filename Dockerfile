@@ -2,7 +2,7 @@ FROM jellyfin/jellyfin
 
 # Add libs & tools
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends libfuse autoconf automake wget git  && \
+    apt-get install -y --no-install-recommends libfuse-dev autoconf automake wget git  && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 # Install rar2fs
