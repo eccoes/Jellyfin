@@ -23,7 +23,7 @@
   <Requires/>
   <Config Name="Container Port" Target="8096" Default="8096" Mode="tcp" Description="Jellyfin Port" Type="Port" Display="always" Required="false" Mask="false">29316</Config>
   <Config Name="Container Port" Target="8920" Default="8920" Mode="tcp" Description="Jellyfin Port" Type="Port" Display="always" Required="false" Mask="false">29316</Config>
-  <Config Name="AppData Location" Target="/data" Default="/mnt/user/appdata/jellyfin" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/jellyfin</Config>
+  <Config Name="AppData Location" Target="/config" Default="/mnt/user/appdata/jellyfin" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/jellyfin</Config>
   <Config Name="Cache Location" Target="/media" Default="/mnt/user/" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/</Config>
   <Config Name="Cache Location" Target="/cache" Default="/mnt/user/appdata/Jellyfin/cache/" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Jellyfin/cache/</Config>
   <Config Name="UID Permissions" Target="UID" Default="99" Mode="" Description="AppData Ownership Settings" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
