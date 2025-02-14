@@ -1,0 +1,57 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: "0 22 * * *"
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    # runs-on: [self-hosted] 
+
+    steps:      
+      # - name: Cleanup Workspace
+      #   run: |
+      #     rm -rf ./* || true
+      #     rm -rf ./.??* || true
+
+      # - name: Cleanup Runner
+      #   run: |
+      #     docker stop $(docker ps -a -q)
+      #     docker rm $(docker ps -a -q)
+      #     docker rmi $(docker images -a -q)
+      #     docker volume rm $(docker volume ls -q)
+
+      #- uses: actions/checkout@v4
+      #- name: Install Docker
+      #  run: |
+      #    curl -fsSL https://get.docker.com -o get-docker.sh
+      #    sudo sh ./get-docker.sh
+      
+      #- name: Start Docker
+      #  run: sudo systemctl start docker
+
+      - uses: actions/checkout@v4
+      - name: Docker Login
+        env:
+          DOCKER_USER: ${{secrets.DOCKER_HUB_USER}}
+          DOCKER_PASSWORD: ${{secrets.DOCKER_HUB_TOKEN}}
+        run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+
+      - uses: actions/checkout@v4
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag eccoes/jellyfin-unraid:latest
+
+#     - uses: actions/checkout@v4,
+#     - name: Tag the Docker image
+#       run: docker tag jellyfin-unraid:$(date +%s) eccoes/jellyfin-unraid:$(date +%s)
+# asd
+      - uses: actions/checkout@v4
+      - name: Push the Docker image
+        run: docker push eccoes/jellyfin-unraid:latest
