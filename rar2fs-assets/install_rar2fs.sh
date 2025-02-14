@@ -1,10 +1,10 @@
 #!/bin/sh
 
 cd /tmp
-git clone https://github.com/fdegros/rar2fs.git
+git clone https://github.com/eccoes/rar2fs.git
 cd rar2fs
-wget https://www.rarlab.com/rar/unrarsrc-6.0.7.tar.gz
-tar -xvzf unrarsrc-6.0.7.tar.gz
+wget https://www.rarlab.com/rar/unrarsrc-7.1.3.tar.gz
+tar -xvzf unrarsrc-7.1.3.tar.gz
 cd unrar
 make lib
 make install-lib
