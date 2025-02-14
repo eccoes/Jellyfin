@@ -8,6 +8,7 @@ tar -xvzf unrarsrc-7.1.3.tar.gz
 cd unrar
 make lib
 make install-lib
+make clean
 cd ..
 autoreconf -f -i
 ./configure && make
