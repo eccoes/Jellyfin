@@ -11,6 +11,6 @@ rm -rf -v /tmp/unrar{-7.0.8.tar.gz}
 git clone https://github.com/hasse69/rar2fs.git /tmp/rar2fs
 cd /tmp/rar2fs
 autoreconf -f -i
-./configure --with-unrar=/tmp/unrar
+./configure
 make -j$(($(nproc)+1)) -l$(($(nproc)+2)) -C /tmp/rar2fs
 make install -C /tmp/rar2fs
