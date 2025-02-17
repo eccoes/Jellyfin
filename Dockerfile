@@ -3,7 +3,7 @@ USER root
 
 # Add libs & tools
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends libfuse-dev autoconf automake wget build-essential git  && \
+    apt-get install -y --no-install-recommends libfuse-dev autoconf autopoint automake wget build-essential git  && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
     
