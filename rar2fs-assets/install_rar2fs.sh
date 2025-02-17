@@ -11,5 +11,5 @@ make install-lib
 cd ..
 autoreconf -f -i
 ./configure && make
-sudo make install
+make install
 cd /
