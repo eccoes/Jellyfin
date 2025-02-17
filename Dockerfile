@@ -13,7 +13,7 @@ RUN /bin/sh /tmp/install_rar2fs.sh
 RUN mkdir /data-unrar
 RUN mkdir /cache-unrar
 # CLEAN Image
-RUN apt-get remove -y autoconf build-essential git automake && \
+RUN apt-get remove -y autoconf autopoint build-essential git automake && \
     apt autoremove -y
 RUN rm -rf /tmp/* /var/tmp/*
 
