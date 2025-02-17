@@ -1,4 +1,5 @@
 FROM jellyfin/jellyfin
+USER root
 
 # Add libs & tools
 RUN apt-get update && \
@@ -20,6 +21,7 @@ RUN rm -rf /tmp/* /var/tmp/*
 COPY rar2fs-assets/30-rar2fs-mount /etc/cont-init.d/
 
 EXPOSE 8096 8920
+VOLUME /config
 
 # Add startup script
 COPY rar2fs-assets/rar2fs-mount.sh /tmp/
